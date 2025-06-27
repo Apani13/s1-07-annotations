@@ -20,6 +20,11 @@ public class OnlineEmployee extends Employee {
     }
 
 
+    @Override @Deprecated
+    public String legacyLine() {
+        return oldMethodForInternet();
+    }
+
     @Override
     public String toString() {
         return "ONLINE EMPLOYEE\n"

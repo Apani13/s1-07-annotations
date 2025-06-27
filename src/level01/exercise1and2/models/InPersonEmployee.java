@@ -22,6 +22,12 @@ public class InPersonEmployee extends Employee {
 
 
     @Override
+    public String legacyLine() {
+        return oldMethodForSalary();
+    }
+
+
+    @Override @Deprecated
     public String toString() {
         return "IN PERSON EMPLOYEE\n"
                 + "name: " + super.getName()

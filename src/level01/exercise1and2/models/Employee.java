@@ -26,6 +26,9 @@ public abstract class Employee {
 
     public abstract float calculateSalary(float monthlyWorkedHours);
 
+    @Deprecated
+    public abstract String legacyLine();
+
     @Override
     public String toString() {
         return "EMPLOYEE\n"
