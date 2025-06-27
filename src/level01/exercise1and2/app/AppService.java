@@ -34,17 +34,12 @@ public class AppService {
 
     @SuppressWarnings("deprecation")
     public String callDeprecatedMethods(List<Employee> employees) {
+
+        final String NL = System.lineSeparator();
         StringBuilder message = new StringBuilder();
 
         for (Employee employee : employees) {
-
-            if (employee instanceof  InPersonEmployee) {
-                message.append((((InPersonEmployee) employee).oldMethodForSalary())).append("\n");
-            }
-
-            if (employee instanceof  OnlineEmployee) {
-                message.append(((OnlineEmployee) employee).oldMethodForInternet()).append("\n");
-            }
+            message.append(employee.legacyLine()).append(NL);
         }
 
         return message.toString();
